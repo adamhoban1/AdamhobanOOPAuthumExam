@@ -28,6 +28,12 @@ namespace AdamhobanOOPAuthumExam
         public int TankCapacity { get; set; }
         public int MaxSpeed { get; set; }
 
+        public int ChargeTime { get; set; }
+        public int CurrentCharge { get; set; }
+
+        public bool HasCarrier { get; set; }
+        public bool HasBell { get; set; }
+
 
         public override string ToString()
         {
