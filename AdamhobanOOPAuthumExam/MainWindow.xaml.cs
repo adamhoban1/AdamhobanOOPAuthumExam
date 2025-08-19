@@ -63,12 +63,19 @@ namespace AdamhobanOOPAuthumExam
         {
             if (bikeListBx.SelectedItem != null)
             {
+                
                 Bike selectedBike = (Bike)bikeListBx.SelectedItem;
+                bikeImage.Source = new BitmapImage(new Uri($"/Images/{((Bike)bikeListBx.SelectedItem).GetBikeType()}.png", UriKind.Relative));
                 // Displaying the selected bike's information in the TextBox
                 bikediscBox.Text = $"Make: {selectedBike.Make}\n" + $"Model: {selectedBike.Model}\n" + $"year: {selectedBike.DateOfManufacture.ToShortDateString()}\n" +
-                                     $"Fuel: {selectedBike.Engine?.Fuel} ({selectedBike.Engine?.HorsePower} HP)\n" + $"Hoursepower: {selectedBike.Engine?.HorsePower}\n" +
-                                     $"Tank Capacity: {selectedBike.TankCapacity} L\n" + $"Max Speed: {selectedBike.MaxSpeed} km/h\n";
+                                     $"Fuel: {selectedBike.Engine?.Fuel}\n" + $"Hoursepower: {selectedBike.Engine?.HorsePower}\n" +
+                                     $"Tank Capacity: {selectedBike.TankCapacity} litres\n" + $"Max Speed: {selectedBike.MaxSpeed} kph\n";
 
+            }
+            else
+            {
+                bikeImage.Source = null;
+                bikediscBox.Text = string.Empty;
             }
         }
     }

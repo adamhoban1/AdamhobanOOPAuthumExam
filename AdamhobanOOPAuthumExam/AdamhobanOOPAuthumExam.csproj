@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\all.png" />
-    <Resource Include="images\bike.png" />
+    <Resource Include="images\traditionalbike.png" />
     <Resource Include="images\electricbike.png" />
     <Resource Include="images\motorbike.png" />
   </ItemGroup>

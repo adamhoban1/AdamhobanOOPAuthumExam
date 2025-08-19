@@ -9,7 +9,7 @@
 	<Grid>
 		<ListBox x:Name="bikeListBx" HorizontalAlignment="Left" Height="206" Margin="76,139,0,0" VerticalAlignment="Top" Width="324" SelectionChanged="bikeListBx_SelectionChanged" />
 		<TextBox x:Name="bikediscBox" HorizontalAlignment="Left" Height="128" Margin="429,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
-		<Image HorizontalAlignment="Left" Height="61" Margin="452,139,0,0" VerticalAlignment="Top" Width="68" Source="/images/motorbike.png"/>
+		<Image x:Name="bikeImage" HorizontalAlignment="Left" Height="61" Margin="452,139,0,0" VerticalAlignment="Top" Width="68"  />
 		<RadioButton Content="All" HorizontalAlignment="Left" Height="20" Margin="69,42,0,0" VerticalAlignment="Top" Width="110"/>
 		<RadioButton Content="Motor Bike" HorizontalAlignment="Left" Height="20" Margin="227,43,0,0" VerticalAlignment="Top" Width="110"/>
 		<RadioButton Content="Electric Bike" HorizontalAlignment="Left" Height="20" Margin="422,43,0,0" VerticalAlignment="Top" Width="110"/>
