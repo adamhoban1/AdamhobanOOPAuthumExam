@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,7 +44,23 @@ namespace AdamhobanOOPAuthumExam
 
         public override string ToString()
         {
-            return $"{Make} {Model} ({DateOfManufacture.Year}) - {Engine.Fuel} with {Engine.HorsePower} HP";
+            return $"{Make} {Model} ({GetBikeType()})";
+        }
+
+        public string GetBikeType()
+        {
+            if (Engine != null)
+            {
+                if (Engine.Fuel == BikeType.Petrol || Engine.Fuel == BikeType.Diesel)
+                {
+                    return "MotorBike";
+                }
+                else if (Engine.Fuel == BikeType.Electric)
+                {
+                    return "ElectricBike";
+                }
+            }
+            return "TraditionalBike";
         }
 
         public void DisplayInfo()

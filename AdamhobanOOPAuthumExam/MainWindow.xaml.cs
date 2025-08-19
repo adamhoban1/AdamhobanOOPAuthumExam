@@ -53,10 +53,23 @@ namespace AdamhobanOOPAuthumExam
             }
             // Displaying the bikes in the ListBox
             bikeListBx.ItemsSource = bikedata;
-            bikeListBx.DisplayMemberPath = "Make";
 
 
 
+
+        }
+
+        private void bikeListBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (bikeListBx.SelectedItem != null)
+            {
+                Bike selectedBike = (Bike)bikeListBx.SelectedItem;
+                // Displaying the selected bike's information in the TextBox
+                bikediscBox.Text = $"Make: {selectedBike.Make}\n" + $"Model: {selectedBike.Model}\n" + $"year: {selectedBike.DateOfManufacture.ToShortDateString()}\n" +
+                                     $"Fuel: {selectedBike.Engine?.Fuel} ({selectedBike.Engine?.HorsePower} HP)\n" + $"Hoursepower: {selectedBike.Engine?.HorsePower}\n" +
+                                     $"Tank Capacity: {selectedBike.TankCapacity} L\n" + $"Max Speed: {selectedBike.MaxSpeed} km/h\n";
+
+            }
         }
     }
 }
