@@ -58,7 +58,7 @@ namespace AdamhobanOOPAuthumExam
 
 
         }
-
+        //display the bikes details when a bike is selected from the ListBox
         private void bikeListBx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (bikeListBx.SelectedItem != null)
@@ -70,6 +70,7 @@ namespace AdamhobanOOPAuthumExam
                 bikediscBox.Text = $"Make: {selectedBike.Make}\n" + $"Model: {selectedBike.Model}\n" + $"year: {selectedBike.DateOfManufacture.ToShortDateString()}\n" +
                                      $"Fuel: {selectedBike.Engine?.Fuel}\n" + $"Hoursepower: {selectedBike.Engine?.HorsePower}\n" +
                                      $"Tank Capacity: {selectedBike.TankCapacity} litres\n" + $"Max Speed: {selectedBike.MaxSpeed} kph\n";
+                //bikediscBox.Text = $"{((Bike)bikeListBx.SelectedItem).GetBikeType()}";
 
             }
             else
@@ -79,7 +80,7 @@ namespace AdamhobanOOPAuthumExam
             }
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)//radio button filter for the different types of bikes
         {
             if (sender is RadioButton radioButton)
             {
@@ -88,7 +89,7 @@ namespace AdamhobanOOPAuthumExam
             }
         }
 
-        public void filterRadio(string category)
+        public void filterRadio(string category)//method to filter the bikes based on the selected category
         {
             List<Bike> filteredBikes = new List<Bike>();
 
@@ -111,7 +112,7 @@ namespace AdamhobanOOPAuthumExam
             bikeListBx.ItemsSource = filteredBikes;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)//search functionality to filter bikes based on make or model
         {
             List<Bike> SearchedBikes = new List<Bike>();
             string searchText = textBxSearch.Text.ToLower();
