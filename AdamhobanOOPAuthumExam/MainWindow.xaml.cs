@@ -110,5 +110,13 @@ namespace AdamhobanOOPAuthumExam
             }
             bikeListBx.ItemsSource = filteredBikes;
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            List<Bike> SearchedBikes = new List<Bike>();
+            string searchText = textBxSearch.Text.ToLower();
+            SearchedBikes = bikedata.Where(b => b.Make.ToLower().Contains(searchText) || b.Model.ToLower().Contains(searchText)).ToList();
+            bikeListBx.ItemsSource = SearchedBikes;
+        }
     }
 }

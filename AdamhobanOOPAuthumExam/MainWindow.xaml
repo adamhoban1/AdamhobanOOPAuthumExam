@@ -18,6 +18,8 @@
 		<Image HorizontalAlignment="Left" Height="41" Margin="184,31,0,0" VerticalAlignment="Top" Width="56" Source="/images/motorbike.png"/>
 		<Image HorizontalAlignment="Left" Height="41" Margin="380,31,0,0" VerticalAlignment="Top" Width="56" Source="/images/electricbike.png"/>
 		<Image HorizontalAlignment="Left" Height="40" Margin="581,33,0,0" VerticalAlignment="Top" Width="56" Source="/images/bike.png"/>
+		<Label Content="Search bar:" HorizontalAlignment="Left" Height="32" Margin="108,102,0,0" VerticalAlignment="Top" Width="96"/>
+		<TextBox x:Name="textBxSearch" HorizontalAlignment="Left" Height="32" Margin="184,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" TextChanged="TextBox_TextChanged"/>
 
 	</Grid>
 </Window>
