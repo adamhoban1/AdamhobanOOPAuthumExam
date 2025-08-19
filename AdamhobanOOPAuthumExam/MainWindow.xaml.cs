@@ -78,5 +78,37 @@ namespace AdamhobanOOPAuthumExam
                 bikediscBox.Text = string.Empty;
             }
         }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is RadioButton radioButton)
+            {
+                string category = radioButton.Content.ToString();
+                filterRadio(category);
+            }
+        }
+
+        public void filterRadio(string category)
+        {
+            List<Bike> filteredBikes = new List<Bike>();
+
+            if (category == "All")
+            {
+                filteredBikes = bikedata;
+            }
+            else if (category == "Motor Bike")
+            {
+                filteredBikes = bikedata.Where(b => b.GetBikeType() == "MotorBike").ToList();
+            }
+            else if (category == "Electric Bike")
+            {
+                filteredBikes = bikedata.Where(b => b.GetBikeType() == "ElectricBike").ToList();
+            }
+            else if (category == "Traditional Bike")
+            {
+                filteredBikes = bikedata.Where(b => b.GetBikeType() == "TraditionalBike").ToList();
+            }
+            bikeListBx.ItemsSource = filteredBikes;
+        }
     }
 }
