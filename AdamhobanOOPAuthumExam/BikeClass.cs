@@ -25,6 +25,10 @@ namespace AdamhobanOOPAuthumExam
         public DateTime DateOfManufacture { get; set; }
         public Engine Engine { get; set; }
 
+        public int TankCapacity { get; set; }
+        public int MaxSpeed { get; set; }
+
+
         public override string ToString()
         {
             return $"{Make} {Model} ({DateOfManufacture.Year}) - {Engine.Fuel} with {Engine.HorsePower} HP";
