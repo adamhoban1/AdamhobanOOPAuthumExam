@@ -17,6 +17,12 @@ namespace AdamhobanOOPAuthumExam
     {
         public BikeType Fuel { get; set; }
         public int HorsePower { get; set; }
+
+        public Engine(BikeType fuel, int horsePower)
+        {
+            Fuel = fuel;
+            HorsePower = horsePower;
+        }
     }
     public abstract class Bike
     {
@@ -76,12 +82,12 @@ namespace AdamhobanOOPAuthumExam
     }
     public class TraditionalBike : Bike
     {
-        public TraditionalBike(string make, string model, DateTime dateOfManufacture, Engine engine, bool hasCarrier, bool hasBell)
+        public TraditionalBike(string make, string model, DateTime dateOfManufacture, bool hasCarrier, bool hasBell)
         {
             Make = make;
             Model = model;
             DateOfManufacture = dateOfManufacture;
-            Engine = engine;
+            //Engine = engine;
             HasCarrier = hasCarrier;
             HasBell = hasBell;
         }
