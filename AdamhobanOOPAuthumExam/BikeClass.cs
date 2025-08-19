@@ -50,4 +50,41 @@ namespace AdamhobanOOPAuthumExam
         }
 
     }
+    public class MotorBike : Bike
+    {
+        public MotorBike(string make, string model, DateTime dateOfManufacture, Engine engine, int tankCapacity, int maxSpeed)
+        {
+                Make = make;
+                Model = model;
+                DateOfManufacture = dateOfManufacture;
+                Engine = engine;
+                TankCapacity = tankCapacity;
+                MaxSpeed = maxSpeed;
+        }
+    }
+    public class ElectricBike : Bike
+    {
+        public ElectricBike(string make, string model, DateTime dateOfManufacture, Engine engine, int chargeTime, int currentCharge)
+        {
+            Make = make;
+            Model = model;
+            DateOfManufacture = dateOfManufacture;
+            Engine = engine;
+            ChargeTime = chargeTime;
+            CurrentCharge = currentCharge;
+        }
+    }
+    public class TraditionalBike : Bike
+    {
+        public TraditionalBike(string make, string model, DateTime dateOfManufacture, Engine engine, bool hasCarrier, bool hasBell)
+        {
+            Make = make;
+            Model = model;
+            DateOfManufacture = dateOfManufacture;
+            Engine = engine;
+            HasCarrier = hasCarrier;
+            HasBell = hasBell;
+        }
+    }
+
 }

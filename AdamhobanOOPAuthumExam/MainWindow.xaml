@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdamhobanOOPAuthumExam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
 	<Grid>
 		<ListBox HorizontalAlignment="Left" Height="206" Margin="76,139,0,0" VerticalAlignment="Top" Width="324" />
 		<TextBox HorizontalAlignment="Left" Height="128" Margin="429,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>

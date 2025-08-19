@@ -25,5 +25,20 @@ namespace AdamhobanOOPAuthumExam
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Creating 2 Motorbike objects
+            var motorBike1 = new MotorBike("Yamaha", "FZ", new DateTime(2020, 5, 10), new Engine(FuelType.Petrol, 150), 15, 180);
+            var motorBike2 = new MotorBike("Harley-Davidson", "Iron 883", new DateTime(2021, 7, 15), new Engine(FuelType.Petrol, 100), 12, 160);
+
+            // Creating 2 ElectricBike objects
+            var electricBike1 = new ElectricBike("Tesla", "Model S Electric Bike", new DateTime(2022, 3, 20), new Engine(FuelType.Electric, 50), 3, 80);
+            var electricBike2 = new ElectricBike("Rad Power Bikes", "RadRover 6 Plus", new DateTime(2023, 2, 5), new Engine(FuelType.Electric, 60), 4, 90);
+
+            // Creating 2 TraditionalBike objects
+            var traditionalBike1 = new TraditionalBike("Schwinn", "Classic Cruiser", new DateTime(2019, 8, 12), true, true);
+            var traditionalBike2 = new TraditionalBike("Trek", "Marlin 7", new DateTime(2020, 4, 10), false, true);
+        }
     }
 }
