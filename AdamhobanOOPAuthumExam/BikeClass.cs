@@ -13,7 +13,9 @@ namespace AdamhobanOOPAuthumExam
         Electric,
         Human
     }
-    internal class BikeClass
+    internal class Engine
     {
+        public BikeType Fuel { get; set; }
+        public int HorsePower { get; set; }
     }
 }
